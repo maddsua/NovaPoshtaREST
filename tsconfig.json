@@ -6,7 +6,8 @@
 		"moduleResolution": "nodenext",
 		"resolveJsonModule": true,
 		"outDir": "./dist",
-		"noEmit": false
+		"noEmit": false,
+		"declaration": true
 	},
 	"exclude": [
 		"node_modules",

@@ -10,7 +10,7 @@ Official API references are here: https://developers.novaposhta.ua/documentation
 
 ✅ Address
 
-⏳ Counterparty
+✅ Counterparty
 
 ⏳ ContactPerson
 
