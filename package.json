@@ -12,7 +12,8 @@
 		"./Counterparty": "./dist/models/Counterparty.js",
 		"./InternetDocument": "./dist/models/InternetDocument.js",
 		"./ScanSheet": "./dist/models/ScanSheet.js",
-		"./TrackingDocument": "./dist/models/TrackingDocument.js"
+		"./TrackingDocument": "./dist/models/TrackingDocument.js",
+		"./Common": "./dist/models/Common.js"
 	},
 	"scripts": {
 		"build": "npx tsc"

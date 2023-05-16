@@ -16,7 +16,7 @@ Official API references are here: https://developers.novaposhta.ua/documentation
 
 ✅ ScanSheet
 
-⏳ Common
+✅ Common
 
 ⏳ AdditionalService
 

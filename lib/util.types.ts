@@ -13,3 +13,8 @@ export interface i_workingschedule {
 	Saturday: string;
 	Sunday: string;
 };
+
+export interface i_generic_RefDesc_Response {
+	Ref: string;
+	Description: string;
+};
