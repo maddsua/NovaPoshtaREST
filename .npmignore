@@ -2,6 +2,10 @@ node_modules/
 helpers/
 examples/
 distTemp/
-dist/
+lib/
 .gitattributes
 .gitignore
+*.tgz
+tsconfig.json
+cleanup.js
+mkcompat.js
