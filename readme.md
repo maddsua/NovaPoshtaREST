@@ -2,7 +2,7 @@
 
 This package provides typing and functions to call Nova Poshta api methods.
 
-Currently supporting NodeJS in ESM mode. Actually, Deno too, but we need to get rid of node-fetch for it.
+Currently supporting NodeJS in ESM mode and Deno. From the same npm package 🤘
 
 Official API references are here: https://developers.novaposhta.ua/documentation
 
@@ -110,21 +110,29 @@ Submodules list:
   
 </details>
 
-## Compatibility mode
+## Compatibility
 
-For those who uses Node older that 18x, you need to import from the compatibility branch (add `compat` after the package name):
+You can use this single package with NodeJS, Deno and Cloudflare Workers (not a runtime, but in this case it matters).
 
-Normal import (Node 18+, Deno or Cloudflare Workers):
+If you're building for NodeJS 18 and newer or CF Wrokers, use the normal import:
 
 ```typescript
 import { getStatusDocuments } from 'novaposhtarest/TrackingDocument'
 ```
 
-For older versions of Node:
+For older versions of Node that don't support the fetch API, use `compat` branch (just add `compat/` after the package name):
 
 ```typescript
 import { getStatusDocuments } from 'novaposhtarest/compat/TrackingDocument'
 ```
+
+And for the cool bois who use Deno, do it like this:
+
+```typescript
+import { getStatusDocuments } from './node_modules/novaposhtarest/dist/deno/models/TrackingDocument.ts'
+```
+
+Yeah, not very pretty but heeey
 
 ## Examples
 
