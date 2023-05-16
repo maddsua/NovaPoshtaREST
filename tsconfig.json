@@ -7,10 +7,12 @@
 		"resolveJsonModule": true,
 		"outDir": "./dist",
 		"noEmit": false,
-		"declaration": true
+		"declaration": true,
+		"rootDir": "./lib"
 	},
 	"exclude": [
 		"node_modules",
-		"helpers"
+		"helpers",
+		"dist"
 	]
 }

@@ -6,6 +6,8 @@ Currently supporting NodeJS in ESM mode. Actually, Deno too, but we need to get 
 
 Official API references are here: https://developers.novaposhta.ua/documentation
 
+\* npm package and Deno module will be available when all API models will be implemented
+
 ## Progress tracker: models
 
 ✅ Address
@@ -14,7 +16,7 @@ Official API references are here: https://developers.novaposhta.ua/documentation
 
 ✅ ContactPerson
 
-⏳ ScanSheet
+✅ ScanSheet
 
 ⏳ Common
 
