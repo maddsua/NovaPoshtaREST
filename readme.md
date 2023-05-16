@@ -87,8 +87,22 @@ Submodules list:
   
 </details>
 
-
-⏳ AdditionalService
+<details>
+	<summary>✅ AdditionalService</summary>
+  
+- ✅ CheckPossibilityCreateReturn
+- ✅ getReturnReasons
+- ✅ getReturnReasonsSubtypes
+- ✅ orderCargoReturn
+- ✅ getReturnOrdersList
+- ✅ deleteAdditionalService
+- ✅ CheckPossibilityChangeEW
+- ✅ getChangeEWOrdersList
+- ✅ checkPossibilityForRedirecting
+- ✅ getRedirectionOrdersList
+- ✅ getOwnershipFormsList
+  
+</details>
 
 <details>
 	<summary>✅ InternetDocument</summary>

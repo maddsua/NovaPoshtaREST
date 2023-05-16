@@ -14,6 +14,7 @@
 		"./ScanSheet": "./dist/models/ScanSheet.js",
 		"./TrackingDocument": "./dist/models/TrackingDocument.js",
 		"./Common": "./dist/models/Common.js",
+		"./AdditionalService": "./dist/models/AdditionalService.js",
 		
 		"./compat": "./dist/compat/index.js",
 		"./compat/Address": "./dist/compat/models/Address.js",
@@ -22,7 +23,8 @@
 		"./compat/InternetDocument": "./compat/dist/models/InternetDocument.js",
 		"./compat/ScanSheet": "./dist/compat/models/ScanSheet.js",
 		"./compat/TrackingDocument": "./dist/compat/models/TrackingDocument.js",
-		"./compat/Common": "./dist/compat/models/Common.js"
+		"./compat/Common": "./dist/compat/models/Common.js",
+		"./compat/AdditionalService": "./dist/compat/models/AdditionalService.js"
 	},
 	"scripts": {
 		"cleanup": "node cleanup.js",

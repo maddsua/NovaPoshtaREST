@@ -5,3 +5,4 @@ export * as ContactPerson from './models/ContactPerson.js';
 export * as ScanSheet from './models/ScanSheet.js';
 export * as TrackingDocument from './models/TrackingDocument.js';
 export * as Common from './models/Common.js';
+export * as AdditionalService from './models/AdditionalService.js';
