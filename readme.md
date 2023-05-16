@@ -12,7 +12,7 @@ Official API references are here: https://developers.novaposhta.ua/documentation
 
 ✅ Counterparty
 
-⏳ ContactPerson
+✅ ContactPerson
 
 ⏳ ScanSheet
 
