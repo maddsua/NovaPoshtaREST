@@ -10,23 +10,106 @@ Official API references are here: https://developers.novaposhta.ua/documentation
 
 The package is in early stage and is not thoroughly tested. Bugs and inconsistencies may occur. Any contribution is appreciated.
 
-## Progress tracker: models
+## Submodules
 
-✅ Address
+Import them like this:
 
-✅ Counterparty
+```typescript
+import { getStatusDocuments } from 'novaposhtarest/TrackingDocument'
+```
 
-✅ ContactPerson
+Submodules list:
 
-✅ ScanSheet
+<details>
+	<summary>✅ Address</summary>
+  
+- ✅ searchSettlements
+- ✅ searchSettlementStreets
+- ✅ save
+- ✅ delete
+- ✅ update
+- ✅ getSettlements
+- ✅ getCities
+- ✅ getAreas
+- ✅ getWarehouses
+- ✅ getWarehouseTypes
+- ✅ getStreet
+  
+</details>
 
-✅ Common
+<details>
+	<summary>✅ Counterparty</summary>
+  
+- ✅ save
+- ✅ delete
+- ✅ update
+- ✅ getCounterpartyAddresses
+- ✅ getCounterpartyOptions
+- ✅ getCounterpartyContactPersons
+- ✅ getCounterparties
+  
+</details>
+
+<details>
+	<summary>✅ ContactPerson</summary>
+  
+- ✅ save
+- ✅ delete
+- ✅ update
+  
+</details>
+
+<details>
+	<summary>✅ ScanSheet</summary>
+  
+- ✅ insertDocuments
+- ✅ getScanSheet
+- ✅ getScanSheetList
+- ✅ deleteScanSheet
+- ✅ removeDocuments
+  
+</details>
+
+<details>
+	<summary>✅ Common</summary>
+  
+- ✅ getTimeIntervals
+- ✅ getCargoTypes
+- ✅ getBackwardDeliveryCargoTypes
+- ✅ getPalletsList
+- ✅ getTypesOfPayersForRedelivery
+- ✅ getPackList
+- ✅ getTiresWheelsList
+- ✅ getCargoDescriptionList
+- ✅ getMessageCodeText
+- ✅ getServiceTypes
+- ✅ getOwnershipFormsList
+  
+</details>
+
 
 ⏳ AdditionalService
 
-✅ InternetDocument
+<details>
+	<summary>✅ InternetDocument</summary>
+  
+- ✅ getDocumentPrice
+- ✅ getDocumentDeliveryDate
+- ✅ save
+- ✅ update
+- ✅ delete
+- ✅ getDocumentList
+- ✅ generateReport
+  
+</details>
 
-✅ TrackingDocument
+<details>
+	<summary>✅ TrackingDocument</summary>
+  
+- ✅ getStatusDocuments
+  
+</details>
+<br>
 
 ## Examples
 
