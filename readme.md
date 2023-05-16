@@ -6,6 +6,10 @@ Currently supporting NodeJS in ESM mode. Actually, Deno too, but we need to get 
 
 Official API references are here: https://developers.novaposhta.ua/documentation
 
+## Status
+
+The package is in early stage and is not thoroughly tested. Bugs and inconsistencies may occur. Any contribution is appreciated.
+
 ## Progress tracker: models
 
 ✅ Address
