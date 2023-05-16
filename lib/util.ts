@@ -1,4 +1,3 @@
-import fetch from 'node-fetch';
 
 export interface i_np_rest_params {
 	apiKey: string;

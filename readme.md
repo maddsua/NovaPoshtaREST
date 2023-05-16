@@ -109,7 +109,22 @@ Submodules list:
 - ✅ getStatusDocuments
   
 </details>
-<br>
+
+## Compatibility mode
+
+For those who uses Node older that 18x, you need to import from the compatibility branch (add `compat` after the package name):
+
+Normal import (Node 18+, Deno or Cloudflare Workers):
+
+```typescript
+import { getStatusDocuments } from 'novaposhtarest/TrackingDocument'
+```
+
+For older versions of Node:
+
+```typescript
+import { getStatusDocuments } from 'novaposhtarest/compat/TrackingDocument'
+```
 
 ## Examples
 
