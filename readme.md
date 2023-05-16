@@ -25,3 +25,7 @@ Official API references are here: https://developers.novaposhta.ua/documentation
 ✅ InternetDocument
 
 ⏳ TrackingDocument
+
+## Examples
+
+Before running any examples, compile the project by running `tsc` or `npm run build` in it's root directory
