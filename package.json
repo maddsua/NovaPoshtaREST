@@ -1,6 +1,6 @@
 {
 	"name": "novaposhtarest",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"type": "module",
 	"description": "Typings and functional interface for Nova Poshta (Нова Пошта) REST API",
 	"main": "./dist/index.ts",
@@ -20,7 +20,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "github.com/maddsua/novaposhtarest"
+		"url": "https://github.com/maddsua/NovaPoshtaREST"
 	},
 	"keywords": [
 		"rest",
