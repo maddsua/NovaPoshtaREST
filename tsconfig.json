@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"lib": ["DOM", "ES6", "ESNext"],
+		"target": "ESNext",
+		"module": "ESNext",
+		"moduleResolution": "nodenext",
+		"resolveJsonModule": true,
+		"outDir": "./dist",
+		"noEmit": false
+	},
+	"exclude": [
+		"node_modules",
+		"helpers"
+	]
+}

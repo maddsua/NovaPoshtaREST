@@ -1,0 +1,31 @@
+{
+	"name": "novaposhtarest",
+	"version": "0.1.0",
+	"type": "module",
+	"description": "Typings and functional interface for Nova Poshta (Нова Пошта) REST API",
+	"main": "./lib/index.ts",
+	"directories": {
+		"lib": "lib"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "github.com/maddsua/novaposhtarest"
+	},
+	"keywords": [
+		"rest",
+		"typings",
+		"NovaPoshta",
+		"logistics"
+	],
+	"author": "maddsua",
+	"license": "MIT",
+	"dependencies": {
+		"node-fetch": "^3.3.1"
+	},
+	"devDependencies": {
+		"@types/node": "^20.1.5"
+	}
+}
