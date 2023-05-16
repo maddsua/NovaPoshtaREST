@@ -8,7 +8,7 @@ Official API references are here: https://developers.novaposhta.ua/documentation
 
 ## Progress tracker: models
 
-⏳ Address
+✅ Address
 
 ⏳ Counterparty
 

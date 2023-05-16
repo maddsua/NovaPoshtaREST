@@ -222,3 +222,4 @@ export const generateReport = async (apiToken: string, props: {
 	Type: 'csv',
 	DateTime: (new Date()).toLocaleString('uk', { year: 'numeric', month: 'numeric', day: 'numeric' }).replace(/\s/g, '')
 })) as i_generateReport_result;
+

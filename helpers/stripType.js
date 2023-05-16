@@ -2,7 +2,7 @@ let temp0;	//	use 'Use in console' command in Firefox to get the temp0 reference
 
 //	then run this snippet in console:
 
-((containter) => {
+((containter, forceParams) => {
 
 	const entries = Array.from(containter.querySelectorAll('tr')).map((item) => Array.from(item.querySelectorAll('td')).map((item) => item.textContent).filter((_val, idx) => idx < 2)).filter((item) => item[0]?.length && item[1]?.length).map((item) => ({
 		key: item[0].replace(/\s+/g, ''),
@@ -15,7 +15,7 @@ let temp0;	//	use 'Use in console' command in Firefox to get the temp0 reference
 		typeName: item.value.replace(/\[\d+\]/g, '')
 	}));
 
-	const generatedTypeText = typeObjects.map((item) => `${item.propName}${ item.required ? '' : '?'}: ${item.typeName};`);
+	const generatedTypeText = typeObjects.map((item) => `${item.propName}${ (item.required || forceParams) ? '' : '?'}: ${item.typeName};`);
 
 	return `interface i_temp0 {\n${generatedTypeText.join('\n')}\n}\n`;
 
