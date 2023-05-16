@@ -5,8 +5,14 @@
 	"description": "Typings and functional interface for Nova Poshta (Нова Пошта) REST API",
 	"main": "./dist/index.ts",
 	"types": "./dist/index.d.ts",
-	"directories": {
-		"lib": "lib"
+	"exports": {
+		".": "./dist/index.js",
+		"./Address": "./dist/models/Address.js",
+		"./ContactPerson": "./dist/models/ContactPerson.js",
+		"./Counterparty": "./dist/models/Counterparty.js",
+		"./InternetDocument": "./dist/models/InternetDocument.js",
+		"./ScanSheet": "./dist/models/ScanSheet.js",
+		"./TrackingDocument": "./dist/models/TrackingDocument.js"
 	},
 	"scripts": {
 		"build": "npx tsc"
