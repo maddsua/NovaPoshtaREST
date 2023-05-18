@@ -152,6 +152,8 @@ Yeah, not very pretty but heeey
 
 ### Ex. 1: Retrieve delivery status
 
+Your code (NodeJS + TSC or CF Workers):
+
 ```typescript
 
 import { getStatusDocuments } from 'novaposhtarest/TrackingDocument'
@@ -171,7 +173,24 @@ console.log(success ? data[0].Status : errors)
 
 ```
 
+Output:
+
+```javascript
+[
+  {
+    Number: "20000000000000",
+    StatusCode: "0000",
+    Status: "Test status",
+    PossibilityCreateRedirecting: false,
+    PossibilityCreateReturn: false,     
+    PossibilityCreateRefusal: false,    
+    PossibilityChangeEW: false,
+...
+```
+
 ### Ex. 2: Get list of geographic areas
+
+Your code (NodeJS + TSC or CF Workers):
 
 ```typescript
 
@@ -182,4 +201,72 @@ const { success, data, errors } = await getAreas('')
 
 console.log(success ? data : errors)
 
+```
+
+Output:
+
+```javascript
+[
+  {
+    Ref: "71508128-9b87-11de-822f-000c2965ae0e",
+    AreasCenter: "db5c88b7-391c-11dd-90d9-001a92567626",
+    DescriptionRu: "АРК",
+    Description: "АРК"
+  },
+  {
+    Ref: "71508129-9b87-11de-822f-000c2965ae0e",
+    AreasCenter: "db5c88de-391c-11dd-90d9-001a92567626",
+    DescriptionRu: "Винницкая",
+    Description: "Вінницька"
+  },
+...
+```
+
+### Ex. 3: Find city
+
+Your code (Deno):
+
+```typescript
+
+import "https://deno.land/x/dotenv@v3.2.2/load.ts"
+
+import { Address } from './node_modules/novaposhtarest/dist/deno/index.ts'
+
+const nptoken = Deno.env.get('NOVAPOSHTA') as string
+
+const { success, data, errors } = await Address.getCities(nptoken, {
+	FindByString: 'Харьков'
+})
+
+console.log(success ? data : errors)
+
+```
+
+Output:
+
+```javascript
+[
+  {
+    Description: "Харків",
+    DescriptionRu: "Харьков",
+    Ref: "db5c88e0-391c-11dd-90d9-001a92567626",
+    Delivery1: "1",
+    Delivery2: "1",
+    Delivery3: "1",
+    Delivery4: "1",
+    Delivery5: "1",
+    Delivery6: "1",
+    Delivery7: "1",
+    Area: "7150813b-9b87-11de-822f-000c2965ae0e",
+    SettlementType: "563ced10-f210-11e3-8c4a-0050568002cf",
+    IsBranch: "1",
+    PreventEntryNewStreetsUser: "0",
+    CityID: "13",
+    SettlementTypeDescription: "місто",
+    SettlementTypeDescriptionRu: "город",
+    SpecialCashCheck: 1,
+    AreaDescription: "Харківська",
+    AreaDescriptionRu: "Харьковская"
+  },
+...
 ```
