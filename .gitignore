@@ -129,3 +129,4 @@ dist
 # compiled js garbage
 dist/
 distTemp/
+lib/testimport.ts

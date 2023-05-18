@@ -30,6 +30,13 @@ interface i_searchSettlements_result extends i_np_response {
 	}>
 }
 
+/**
+ * Онлайн пошук в довіднику населених пунктів 
+ * 
+ * Метод «searchSettlements», працює в моделі «Address», цей метод необхідний для ОНЛАЙН ПОШУКУ населених пунктів.
+ * 
+ * Завдяки даному методу немає необхідності на своїй стороні зберігати довідники та здійснювати їх оновлення.
+ */
 export const searchSettlements = async (apiToken: string, props: {
 	CityName: string;
 	Limit: string;
@@ -56,6 +63,13 @@ interface i_searchSettlementStreets_result extends i_np_response {
 	}>
 }
 
+/**
+ * Онлайн пошук вулиць в довіднику населених пунктів 
+ * 
+ * Метод «searchSettlementStreets», працює в моделі «Address», цей метод необхідний для ОНЛАЙН ПОШУКУ вулиць в обраному населеному пункті.
+ * 
+ * Завдяки даному методу немає необхідності на своїй стороні зберігати довідники та здійснювати їх оновлення.
+ */
 export const searchSettlementStreets = async (apiToken: string, props: {
 	StreetName: string;
 	SettlementRef: string;
@@ -76,6 +90,11 @@ interface i_save_result extends i_np_response {
 	}>
 }
 
+/**
+ * Створити адресу контрагента (відправник / одержувач) 
+ * 
+ * Метод «save» , працює в моделі «Address» , цей метод зберігає адресу контрагента отримувача/відправника.
+ */
 export const saveAddress = async (apiToken: string, props: {
 	CounterpartyRef: string;
 	StreetRef: string;
@@ -95,6 +114,13 @@ interface i_delete_result extends i_np_response {
 	data: Array<{ Ref: string }>
 }
 
+/**
+ * Видалити адресу контрагента (відправник / одержувач) 
+ * 
+ * Метод «delete», працює в моделі «Address», цей метод необхідний для видалення адреси контрагента відправника/отримувача.
+ * 
+ * Редагувати дані контрагента можливо лише з моменту його створення та до моменту створення ІД з даним контаргентом.
+ */
 export const deleteAddress = async (apiToken: string, props: {
 	Ref: string;
 }) => await mkRestRequest(Object.assign(sharedProps, {
@@ -106,6 +132,13 @@ export const deleteAddress = async (apiToken: string, props: {
 
 /* METHOD: update */
 
+/**
+ * Редагувати адресу контрагента (відправник / одержувач) 
+ * 
+ * Метод «update», працює в моделі «Address», цей метод необхідний для оновлення адреси контрагента відправника/отримувача.
+ * 
+ * Редагувати дані контрагента можливо лише з моменту його створення та до моменту створення ІД з даним контаргентом.
+ */
 export const updateAddress = async (apiToken: string, props: {
 	Ref: string;
 	CounterpartyRef: string;
@@ -153,6 +186,13 @@ interface i_getSettlements_result extends i_np_response {
 	}>
 }
 
+/**
+ * Довідник населених пунктів України 
+ * 
+ * Метод «getSettlements», працює в моделі «AddressGeneral», цей метод надає можливість завантажити довідник міст України (Українською або Російською мовами), до яких здійснюється доставка вантажів компанією «Нова пошта».
+ * 
+ * Слід враховувати, що метод «getSettlements» для кожного населеного пункту повертає область та район. Метод повертає не більше 150 записів на сторінку. Для перегляду більш ніж 150 записів, необхідно використовувати параметр "Page" разом з параметром "Limit".
+ */
 export const getSettlements = async (apiToken: string, props: {
 	AreaRef?: string;
 	Ref?: string;
@@ -193,6 +233,17 @@ interface i_getCities_result extends i_np_response {
 	}>
 }
 
+/**
+ * Довідник міст компанії 
+ * 
+ * Отримання довідника міст компанії «Нова Пошта» українською та російською мовами. Метод «getCities» працює в моделі «Address», цей метод завантажує довідник населених пунктів України.
+ * 
+ * Варто враховувати, що довідник вивантажується тільки з населеними пунктами, де є відділення "Нова Пошта" і можна оформити доставку на відділення, а також доставку за адресою.
+ * 
+ * Якщо до цього запиту додати параметр «FindByString» (пошук за рядками) та у його властивостях прописати назву населеного пункту (Бровари), який потрібно знайти, то отримаємо запит за допомогою якого в довіднику знаходиться населений пункт.
+ * 
+ * Необхідно зберігати копію довідників на стороні клієнта та підтримувати її в актуальному стані. Рекомендується проводити оновлення довідників раз на день.
+ */
 export const getCities = async (apiToken: string, props: {
 	Ref?: string;
 	Page?: string;
@@ -216,6 +267,13 @@ interface i_getAreas_result extends i_np_response {
 	}>
 }
 
+/**
+ * Довідник географічних областей України
+ * 
+ * Метод «getAreas», працює в моделі «Address», цей метод необхідий для завантаження довідника географічних областей України, компанії «Новая пошта».
+ * 
+ * Рекомендовано проводити оновлення довідників раз на місяць.
+ */
 export const getAreas = async (apiToken: string) => await mkRestRequest(Object.assign(sharedProps, {
 	apiKey: apiToken,
 	calledMethod: 'getAreas',
@@ -275,6 +333,13 @@ interface i_getWarehouses_result extends i_np_response {
 	}>
 }
 
+/**
+ * Довідник відділень та поштоматів 
+ * 
+ * Метод «getWarehouses», працює в моделі «Address», цей метод завантажує довідник відділень «Нова пошта» в розрізі населених пунктів України.
+ * 
+ * Копію довідника необхідно зберігати та подтримувати в актуальному стані шляхом оновлення раз на добу.
+ */
 export const getWarehouses = async (apiToken: string, props: {
 	CityName?: string;
 	CityRef?: string;
@@ -300,6 +365,11 @@ interface i_getWarehouseTypes_result extends i_np_response {
 	}>
 }
 
+/**
+ * Довідник типів відділень 
+ * 
+ * Метод «getWarehouseTypes», працює в моделі «Address», цей метод завантажує довідник типів відділень «Нова пошта».
+ */
 export const getWarehouseTypes = async (apiToken: string) => await mkRestRequest(Object.assign(sharedProps, {
 	apiKey: apiToken,
 	calledMethod: 'getWarehouseTypes',
@@ -318,6 +388,13 @@ interface i_getStreet_result extends i_np_response {
 	}>
 }
 
+/**
+ * Довідник вулиць компанії 
+ * 
+ * Метод «getStreet» працює в моделі «Address», цей метод завантажує довідник вулиць в рамках населених пунктів України куди здійснєю доставку компанія «Нова Пошта». 
+ * 
+ * Довідник використовується під час створення відправлень з типом доставки від/до адреси клієнта. Якщо в цей запит додати параметр FindByString (пошук по рядках) і в його властивостях прописати назву вулиці (Броварський), який потрібно знайти, то отримаємо запит за допомогою якого в довіднику знаходиться проспект або вулиця.
+ */
 export const getStreet = async (apiToken: string, props: {
 	CityRef: string;
 	FindByString: string;
@@ -328,4 +405,3 @@ export const getStreet = async (apiToken: string, props: {
 	calledMethod: 'getStreet',
 	methodProperties: props
 })) as i_getStreet_result;
-
